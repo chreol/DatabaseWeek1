@@ -89,4 +89,9 @@ select city.name, countrylanguage.language from countrylanguage
 	join country on city.name = countrylanguage.countrycode 
 	where city.name = 'barcelona' 
 	group by countrylanguage.language;
+	
+select countrylanguage.language from countrylanguage
+	join city on city.countrycode = countrylanguage.countrycode
+	where city.name = 'Barcelona'
+	group by countrylanguage.language;
 
